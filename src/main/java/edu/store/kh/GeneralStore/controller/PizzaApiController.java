@@ -21,6 +21,10 @@ public class PizzaApiController {
         return pizzaService.selectAll();
     }
 
+    @GetMapping("/pizza/{id}")
+    public Pizza selectById(@PathVariable int id) {
+        return pizzaService.selectById(id);
+    }
     @PostMapping("/pizzas") //   /api/pizzas
     public void createPizza() {
 

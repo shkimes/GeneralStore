@@ -8,7 +8,12 @@
         FROM PizzaMenu
     </select>
 
-    <!-- select id="selectById" -->
+    <select id="selectById">
+        SELECT *
+        FROM PizzaMenu
+        WHERE id = #{id}
+    </select>
+
 
 
     <delete id="deletePizza">
