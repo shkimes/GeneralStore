@@ -21,7 +21,7 @@ public class PizzaApiController {
         return pizzaService.selectAll();
     }
 
-    @GetMapping("/pizza/{id}")
+    @GetMapping("/pizzas/{id}")
     public Pizza selectById(@PathVariable int id) {
         return pizzaService.selectById(id);
     }
