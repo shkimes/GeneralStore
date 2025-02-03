@@ -30,6 +30,7 @@ public class PizzaApiController {
 
     }
 
+    // @RequestBody  -> @RequestParam 변경   @MultipartFile 추가
     @PutMapping("pizzas/{id}")
     public void updatePizza(@PathVariable int id, @RequestBody Pizza pizza) {
         pizzaService.updatePizza(pizza);
