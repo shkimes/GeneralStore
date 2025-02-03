@@ -4,6 +4,16 @@
 <mapper namespace="edu.store.kh.GeneralStore.mapper.PizzaMapper">
 
     <select id="selectAll">
-        SELECT * FROM PizzaMenu
+        SELECT *
+        FROM PizzaMenu
     </select>
+
+    <!-- select id="selectById" -->
+
+
+    <delete id="deletePizza">
+        DELETE
+        FROM PizzaMenu
+        WHERE id = #{id}
+    </delete>
 </mapper>
