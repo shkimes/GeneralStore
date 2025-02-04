@@ -14,8 +14,23 @@
         WHERE id = #{id}
     </select>
 
+    <insert id="insertPizza">
+                        <!-- id 값은 mysql 에서 값이 추가될경우 자동 증가 설정 -->
+        INSERT INTO PizzaMenu(name, price, description, image_path)
+        VALUES (#{name}, #{price}, #{description}, #{imagePath});
+    </insert>
 
+    <update id="updatePizza">
+        UPDATE PizzaMenu
+        SET
+        <!-- sql 컬럼명   =  DTO 변수명-->
+                    name   = #{name},
+                    price  = #{price},
+                description= #{description},
+                image_path = #{imagePath}
+        WHERE           id = #{id}
 
+    </update>
     <delete id="deletePizza">
         DELETE
         FROM PizzaMenu
