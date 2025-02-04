@@ -84,9 +84,11 @@ public class KakaoAPIController {
         // 2. kakaoAccount 내에 존재하는 email 가져오기
         Map<String, Object> kakaoAccount = (Map<String, Object>) userInfo.get("kakao_account");
         String email = (String) kakaoAccount.get("email");
+        String gender = (String) kakaoAccount.get("gender");
+        String birthday = (String) kakaoAccount.get("birthday");
 
         // 3. 회원가입으로 이동할 때 카카오에서 가져온 데이터 사용하기위해 전달
-        return "redirect:/signup/kakao?nickname=" + encodedNickname + "&email=" + email + "&profileImg=" + profileImg;
+        return "redirect:/signup/kakao?nickname=" + encodedNickname + "&email=" + email +"&gender=" +gender +"&birthday=" +birthday + "&profileImg=" + profileImg;
     }
 }
 
