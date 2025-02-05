@@ -24,8 +24,11 @@ public class PizzaServiceImpl implements PizzaService {
 
     @Override
     public List<Pizza> selectAll() {
+
         // 피자 메뉴를 모두 목록 형태로 가져오기
         return pizzaMapper.selectAll();
+
+
     }
 
     @Override
