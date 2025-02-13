@@ -9,7 +9,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-
+// @CrossOrigin 은 CorsConfig 랑 충돌이 날 수 있기 때문에 사용x
+// @CrossOrigin("3000")
 @RequestMapping("/api")
 @RestController
 public class PizzaApiController {
