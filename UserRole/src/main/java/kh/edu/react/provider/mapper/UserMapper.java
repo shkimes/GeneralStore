@@ -18,4 +18,9 @@ public interface UserMapper {
 
     // 유저 이름으로 조회되는 유저 검색하기
     List<User> findUserByName(String userName);
+
+
+
+
+
 }
