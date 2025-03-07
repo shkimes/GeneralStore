@@ -19,10 +19,10 @@ public class ClothesController {
     public List<Clothes> getAllClothes() {
         return clothesService.getAllClothes();
     }
-
-    @GetMapping("/{id}")
-    public Clothes getClothesById(@PathVariable int id) {
-        return clothesService.getClothesById(id);
+    //  -parameters 라는 문구가 보이면 sql 컬럼명, dto 명칭과 매개변수 명칭이 일치하는지 확인
+    @GetMapping("/{cId}")
+    public Clothes getClothesById(@PathVariable("cId") int cId) {
+        return clothesService.getClothesById(cId);
     }
 
     @PostMapping
@@ -35,7 +35,7 @@ public class ClothesController {
         clothesService.updateClothes(clothes);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{cId}")
     public void deleteClothes(@PathVariable int id) {
         clothesService.deleteClothes(id);
     }
