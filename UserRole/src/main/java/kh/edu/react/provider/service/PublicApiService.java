@@ -28,3 +28,5 @@ public class PublicApiService {
         return REST_TEMPLATE.getForObject(builder.toUriString(), String.class);
     }
 }
+
+
